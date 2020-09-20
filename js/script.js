@@ -60,15 +60,21 @@
 
     /* for each article */
 
-      /* get the article id */
+    const articles = document.querySelectorAll(optArticleSelector);
 
-      /* find the title element */
+      for(let article of articles){
+        console.log('article: ', article);
+      
+        /* get the article id */
+        
+        /* find the title element */
 
-      /* get the title from the title element */
+        /* get the title from the title element */
 
-      /* create HTML of the link */
+        /* create HTML of the link */
 
-      /* insert link into titleList */
+        /* insert link into titleList */
+      }
 
   }
 
