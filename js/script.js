@@ -62,6 +62,8 @@
 
     const articles = document.querySelectorAll(optArticleSelector);
 
+    let html = '';
+
       for(let article of articles){
         console.log('article: ', article);
       
@@ -83,12 +85,15 @@
 
         /* insert link into titleList */
 
-        const titleList = document.querySelector('.titles');
-        console.log('titleList :', titleList);
-        titleList.insertAdjacentHTML('beforeend', linkHTML);
-        console.log('titleList :', titleList);
+        html = html + linkHTML;
+        console.log('html: ', html);
 
       }
+
+      console.log('html: ', html);
+      console.log('titleList: ', titleList);
+      titleList.innerHTML = html;
+      console.log('titleList: ', titleList);
 
   }
 
