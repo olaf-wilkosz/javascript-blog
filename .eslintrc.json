@@ -26,6 +26,7 @@
       ],
       "no-console": [
           "off"
-      ]
+      ],
+      "no-inner-declarations": 0
   }
 }
