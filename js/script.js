@@ -56,7 +56,8 @@
 
     /* remove contents of titleList */
 
-    const titleList = document.querySelector(optTitleListSelector).innerHTML = '';
+    const titleList = document.querySelector(optTitleListSelector);
+    titleList.innerHTML = '';
 
     /* for each article */
 
