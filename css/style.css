@@ -109,10 +109,6 @@ body {
 }
 
 /* Tags */
-.tags ul {
-  margin: auto;
-}
-
 .tags li {
   display: inline;
 }
