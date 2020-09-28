@@ -122,3 +122,40 @@ body {
     margin: 0 10px 0 0;
   }
 }
+
+/* Tags */
+
+.tags {
+  ul {
+    margin: auto;
+  }
+  li {
+    display: inline;
+  }
+}
+
+.tag-size-1 {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #3c6382;
+}
+.tag-size-2 {
+  font-size: 1em;
+  font-weight: 400;
+  color: #0a3d62;
+}
+.tag-size-3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #273c75;
+}
+.tag-size-4 {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #192a56;
+}
+.tag-size-5 {
+  font-size: 1.6em;
+  font-weight: 900;
+  color: #130f40;
+}
