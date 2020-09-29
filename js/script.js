@@ -2,6 +2,7 @@
   const templates = {
     articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
     tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
+    authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML)
   };
 
   const opt = {
@@ -292,7 +293,11 @@
       const articleAuthor = article.getAttribute('data-author');
 
       /* generate and add HTML of the link to html variable */
-      html = '<p>by <a href="#author-' + articleAuthor + '">' + articleAuthor + '</a></p> ';
+      // html = '<p>by <a href="#author-' + articleAuthor + '">' + articleAuthor + '</a></p> ';
+      const linkHTMLData = {id: articleAuthor, title: articleAuthor};
+      console.log('linkHTMLData: ', linkHTMLData);
+      const link = templates.authorLink(linkHTMLData);
+      console.log('link: ', link);
       if (!allAuthors[articleAuthor]) {
         allAuthors[articleAuthor] = 1;
       } else {
@@ -300,7 +305,7 @@
       }
 
       /* insert HTML into the authors wrapper */
-      authorsWrapper.innerHTML = html;
+      authorsWrapper.innerHTML = link;
 
     }
 
