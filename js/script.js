@@ -293,7 +293,6 @@
       authorsWrapper.innerHTML = '';
 
       /* make html variable with empty string */
-      let html = '';
 
       /* get author name from data-author attribute */
       const articleAuthor = article.getAttribute('data-author');
