@@ -1,4 +1,8 @@
 {
+  const templates = {
+    articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+  };
+
   const opt = {
     cloud: {
       classCount: 5,
@@ -22,18 +26,9 @@
     },
   };
 
-  // const select.all.articles = '.post', // ok
-  //   select.article.title = '.post-title', // ok
-  //   select.listOf.titles = '.titles', // ok
-  //   select.article.tags = '.post-tags .list', // ok
-  //   select.article.author = '.post-author', // ok
-  //   select.listOf.tags = '.tags.list', // ok
-  //   select.listOf.authors = '.authors.list'; // ok
-
   function titleClickHandler(event) {
     event.preventDefault();
     const clickedElement = this;
-    // console.log(event);
 
     /* [DONE] remove class 'active' from all article links  */
     const activeLinks = document.querySelectorAll('.titles a.active');
@@ -83,7 +78,11 @@
       const articleTitle = article.querySelector(select.article.title).innerHTML;
 
       /* create HTML of the link */
-      const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+      // const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+      const linkHTMLData = {id: articleId, title: articleTitle};
+      console.log('linkHTMLData: ', linkHTMLData);
+      const linkHTML = templates.articleLink(linkHTMLData);
+      console.log('linkHTML: ', linkHTML);
 
       /* insert link into titleList */
       html = html + linkHTML;
