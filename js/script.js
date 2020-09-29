@@ -80,9 +80,7 @@
       /* create HTML of the link */
       // const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
       const linkHTMLData = {id: articleId, title: articleTitle};
-      console.log('linkHTMLData: ', linkHTMLData);
       const linkHTML = templates.articleLink(linkHTMLData);
-      console.log('linkHTML: ', linkHTML);
 
       /* insert link into titleList */
       html = html + linkHTML;
